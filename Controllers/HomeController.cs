@@ -1,24 +1,23 @@
-using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
-using OopMvcApplication.Models;
 
-namespace OopMvcApplication.Controllers;
-
-public class HomeController : Controller
+namespace OopMvcApplication.Controllers
 {
-    public IActionResult Index()
+    public class HomeController : Controller
     {
-        return View();
-    }
+        public IActionResult ShopInfo()
+        {
+            int shopId = 1;
+            string shopName = "Angkor Tech Store";
+            string address = "National Road 6, Siem Reap";
+            string openHours = "8:00 AM - 8:00 PM";
+            string pagetitle = "First Test MVC";
 
-    public IActionResult Privacy()
-    {
-        return View();
-    }
-
-    [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-    public IActionResult Error()
-    {
-        return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+            ViewBag.ShopId = shopId;
+            ViewBag.ShopName = shopName;
+            ViewBag.Address = address;
+            ViewBag.OpenHours = openHours;
+            ViewBag.PageTitle = pagetitle;
+            return View();
+        }
     }
 }

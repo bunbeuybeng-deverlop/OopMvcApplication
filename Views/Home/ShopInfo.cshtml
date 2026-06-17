@@ -1,0 +1,18 @@
+@{
+    @ViewBag.PageTitle
+}
+
+<div class="container mt-4">
+    <div class="card border-primary" style="max-width: 500px;">
+         <div class="card-header bg-primary text-white">
+            <h3 class="card-title mb-0">@ViewBag.ShopId</h3>
+        </div>
+        <div class="card-header bg-primary text-white">
+            <h3 class="card-title mb-0">@ViewBag.ShopName</h3>
+        </div>
+        <div class="card-body">
+            <p><strong>អាសយដ្ឋាន៖</strong> @ViewBag.Address</p>
+            <p><strong>ម៉ោងបើកទ្វារ៖</strong> @ViewBag.OpenHours</p>
+        </div>
+    </div>
+</div>
