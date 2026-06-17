@@ -2,8 +2,10 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace OopMvcApplication.Controllers
 {
+    [Route("[controller]")]
     public class HomeController : Controller
     {
+        [HttpGet]
         public IActionResult ShopInfo()
         {
             int shopId = 1;
