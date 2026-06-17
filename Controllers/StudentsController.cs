@@ -10,23 +10,15 @@ namespace OopMvcApplication.Controllers
 {
     [Route("[controller]")]
     public class StudentsController : Controller
-    {
-        private readonly ILogger<StudentsController> _logger;
-
-        public StudentsController(ILogger<StudentsController> logger)
-        {
-            _logger = logger;
-        }
+    {        
 
         public IActionResult Index()
         {
+            ViewBag.Student = "Soeurng Lim";
+        
             return View();
         }
 
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            return View("Error!");
-        }
+        
     }
 }
