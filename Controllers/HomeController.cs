@@ -21,7 +21,7 @@ namespace OopMvcApplication.Controllers
             ViewBag.PageTitle = pagetitle;
             return View();
         }
-
+        [HttpGet("Product/List")]
         public IActionResult ProductList()
         {
             List<string> products = new() 
