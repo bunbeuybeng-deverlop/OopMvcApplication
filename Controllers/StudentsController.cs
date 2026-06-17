@@ -20,7 +20,7 @@ namespace OopMvcApplication.Controllers
             return View();
         }
 
-        [HttpPost("Info")]
+        [HttpGet("Info")]
         public IActionResult StudentInfo()
         {
             ViewBag.name = "Soeurng Lim";
