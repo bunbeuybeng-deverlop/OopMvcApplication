@@ -12,7 +12,7 @@ namespace OopMvcApplication.Controllers
     public class StudentsController : Controller
     {        
 
-        [HttpGet("Home")]
+        [HttpGet("Home")]//Attribute Route
         public IActionResult Index()
         {
             ViewBag.Student = "Soeurng Lim";
@@ -20,7 +20,7 @@ namespace OopMvcApplication.Controllers
             return View();
         }
 
-        [HttpGet("Info")]
+        [HttpGet("Info")] //Attribute Route
         public IActionResult StudentInfo()
         {
             ViewBag.name = "Soeurng Lim";
