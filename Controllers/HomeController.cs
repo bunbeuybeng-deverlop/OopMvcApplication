@@ -5,7 +5,7 @@ namespace OopMvcApplication.Controllers
     [Route("[controller]")]
     public class HomeController : Controller
     {
-        [HttpGet]
+        [HttpGet("Shop")]
         public IActionResult ShopInfo()
         {
             int shopId = 1;
