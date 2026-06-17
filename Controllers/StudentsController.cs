@@ -12,7 +12,7 @@ namespace OopMvcApplication.Controllers
     public class StudentsController : Controller
     {        
 
-        //[HttpGet]
+        [HttpGet("Home")]
         public IActionResult Index()
         {
             ViewBag.Student = "Soeurng Lim";
@@ -20,6 +20,7 @@ namespace OopMvcApplication.Controllers
             return View();
         }
 
+        [HttpPost("Info")]
         public IActionResult StudentInfo()
         {
             ViewBag.name = "Soeurng Lim";
