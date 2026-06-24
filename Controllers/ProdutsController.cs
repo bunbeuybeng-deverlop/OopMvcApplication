@@ -15,7 +15,9 @@ namespace OopMvcApplication.Controllers
         [HttpGet("Index")]
         public IActionResult Index()
         {
+            //ViewData is a dictionary that can be used to pass data from the controller to the view.
             ViewData["PageTitle"] = "List of Products";
+            //ViewBag is a dynamic object that can be used to pass data from the controller to the view.
             ViewBag.ProductID = "Pro-0001";
             ViewBag.ProductName = "Laptop";
             ViewBag.ProductPrice = 1000;
@@ -33,5 +35,17 @@ namespace OopMvcApplication.Controllers
             return View();
         }
 
+        [HttpGet("Shop")]
+        public IActionResult Shop()
+        {
+            ViewData["PageTitle"] = "List of Shops";
+            ViewBag.ShopName = "Lim Fashion";
+            ViewBag.Address = "Siem Reap, Cambodia";
+            ViewBag.OpenHours = "";
+            ViewBag.ProductDescription = "This is a high-end laptop with powerful performance and sleek design.";
+            return View();
+        }  
+
+            
     }
 }
