@@ -8,10 +8,11 @@ using Microsoft.Extensions.Logging;
 
 namespace OopMvcApplication.Controllers
 {
-    [Route("[controller]")]
+    [Route("Products")]
     public class ProdutsController : Controller
     {
 
+        [HttpGet("Index")]
         public IActionResult Index()
         {
             ViewData["PageTitle"] = "List of Products";
