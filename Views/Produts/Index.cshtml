@@ -1,7 +1,19 @@
-@ViewData["PageTitle"]
-<ul>
-    <li>Product ID: @ViewBag.ProductID</li>
-    <li>Product Name: @ViewBag.ProductName</li>
-    <li>Product Price: @ViewBag.ProductPrice</li>
-    <li>Product Description: @ViewBag.ProductDescription</li>
-</ul>
+<html>
+    <head>
+        <title>@ViewData["PageTitle"]</title>   
+    </head>
+    <body>
+        <h1>@ViewData["PageTitle"]</h1>
+        <ul>
+            @foreach (var product in ViewBag.Products)
+            {
+                <li>@product</li>
+                /*
+                    iPhone
+                    MacBook
+                    iPad
+                */
+            }
+        </ul>
+    </body>
+</html>

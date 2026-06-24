@@ -18,10 +18,8 @@ namespace OopMvcApplication.Controllers
             //ViewData is a dictionary that can be used to pass data from the controller to the view.
             ViewData["PageTitle"] = "List of Products";
             //ViewBag is a dynamic object that can be used to pass data from the controller to the view.
-            ViewBag.ProductID = "Pro-0001";
-            ViewBag.ProductName = "Laptop";
-            ViewBag.ProductPrice = 1000;
-            ViewBag.ProductDescription = "This is a high-end laptop with powerful performance and sleek design.";
+            List<string> products = new() { "iPhone", "MacBook", "iPad" };
+            ViewBag.Products = products;
             return View();
         }
         
