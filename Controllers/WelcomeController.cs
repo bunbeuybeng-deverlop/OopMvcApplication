@@ -8,10 +8,10 @@ using Microsoft.Extensions.Logging;
 
 namespace OopMvcApplication.Controllers
 {
-    [Route("[controller]")]
+    [Route("Welcome")]
     public class WelcomeController : Controller
     {        
-
+        [HttpGet]
         public IActionResult Index()
         {
             ViewData["Message"] = "Welcome to ASP.NET Core MVC!";
