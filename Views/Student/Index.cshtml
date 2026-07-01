@@ -1,0 +1,22 @@
+@model IEnumerable<OopMvcApplication.Models.Student>
+<div class="container mt-4">
+    <h2 class="text-primary">បញ្ជីឈ្មោះនិស្សិត</h2>
+    <table class="table table-bordered table-striped mt-3">
+        <thead class="table-dark">
+            <tr>
+                <th>ID</th>
+                <th>ឈ្មោះ</th>
+                <th>ជំនាញ</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var student in Model) {
+                <tr>
+                    <td>@student.Id</td>
+                    <td>@student.Name</td>
+                    <td>@student.Major</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
